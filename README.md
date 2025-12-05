@@ -1,157 +1,250 @@
 # Vendor-Performance-analysis-
-Vendor Performance Analysis Dashboard - A complete analytics pipeline (SQL → Python → Power BI) that transforms raw procurement data into actionable business insights. Features vendor segmentation, profitability analysis, inventory optimization, and interactive dashboards to drive strategic decision-making.
-
+VENDOR PERFORMANCE ANALYSIS
 📊 Project Overview
-An end-to-end analytics project analyzing vendor performance to optimize procurement strategies, reduce costs, and improve profitability in retail/wholesale operations. This production-ready case study demonstrates full-stack analytics capabilities from data extraction to interactive visualization.
+Vendor Performance Analysis Dashboard is an end-to-end analytics project that transforms raw procurement data into actionable business insights. This production-ready solution demonstrates full-stack analytics capabilities using SQL for data processing, Python for advanced analysis, and Power BI for interactive visualization.
 
-🚀 Tech Stack
+ View Dashboard
+
+ <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/f2ba6fe3-b25f-44bf-a62b-6175c39afea8" />
+
+
+
+
+🎯 Business Problem
+Retail and wholesale companies face significant challenges in optimizing vendor performance, managing inventory costs, and maintaining profitability. This project addresses:
+
+Vendor Concentration Risk: Over-reliance on top suppliers
+
+Inventory Inefficiency: High unsold inventory costs
+
+Profit Margin Disparities: Inconsistent profitability across vendors
+
+Bulk Purchase Optimization: Missed cost-saving opportunities
+
+📈 Key Performance Metrics
+Metric	Value	Insight
+Total Sales	$461.41M	Overall business scale
+Gross Profit	$307.34M	Revenue after cost of goods
+Profit Margin	38.7%	Overall profitability percentage
+Unsold Inventory	$2.71M	Capital tied in slow-moving stock
+Top Vendor Contribution	65.69%	Concentration risk indicator
+🏗️ Architecture & Pipeline
+
+
+
+
+
+<img width="3803" height="917" alt="deepseek_mermaid_20251205_7b3fb5" src="https://github.com/user-attachments/assets/2bba9709-512b-4cbe-a2f5-f3a26bd9ea9e" />
+
+
+
+
+
+
+
+
+🔧 Tech Stack
+Data Processing
 SQL: Data extraction, transformation, and aggregation
 
-Python: Exploratory Data Analysis, statistical testing, data cleaning
+PostgreSQL: Database management and querying
 
-Power BI: Interactive dashboard creation and visualization
+Analytics & Modeling
+Python 3.8+: Core analysis engine
 
-Database Management: Data storage and retrieval optimization
+Pandas: Data manipulation and analysis
 
-📈 Key Metrics Tracked
-Total Sales: $461.41M
+NumPy: Numerical computations
 
-Gross Profit: $307.34M
+SciPy/Statsmodels: Statistical testing
 
-Profit Margin: 38.7%
+Matplotlib/Seaborn: Data visualization
 
-Unsold Inventory: $2.71M
+Visualization & Reporting
+Power BI: Interactive dashboards
 
-Vendor Concentration: Top 10 vendors contribute 65.69% of purchases
+Jupyter Notebooks: Exploratory analysis
 
-🔄 Project Pipeline
-Phase 1: Data Engineering & SQL
-Database Exploration: Understand table structures and relationships
+Markdown: Documentation and reporting
 
-Data Merging: Combine multiple procurement and sales tables
-
-Data Cleaning: Handle missing values, outliers, and inconsistencies
-
-Aggregation: Create vendor-level performance metrics
-
-Database Storage: Save processed tables for analysis
-
-Phase 2: Analytics & Python
-Exploratory Data Analysis: Statistical summaries and correlation analysis
-
-Data Cleaning: Filtering negative profits and zero-sales items
-
-Research Questions:
-
-Identify brands for promotional adjustments
-
-Analyze bulk purchasing impact (72% cost savings)
-
-Assess inventory turnover and holding costs
-
-Compare high vs. low-performing vendor profitability
-
-Statistical Validation: Hypothesis testing for profit margin differences
-
-Phase 3: Visualization & Reporting
-Power BI Dashboard: Interactive vendor performance dashboard
-
-Report Writing: Comprehensive business insights and recommendations
-
-Actionable Insights: Strategic recommendations for procurement optimization
-
-📁 Repository Structure
+📁 Project Structure
 text
-vendor-performance-analysis/
-├── sql/
-│   ├── database_exploration.sql
-│   ├── data_cleaning.sql
-│   ├── data_aggregation.sql
-│   └── table_creation.sql
-├── python/
-│   ├── data_loading.ipynb
-│   ├── exploratory_analysis.ipynb
-│   ├── research_questions.ipynb
-│   └── statistical_testing.ipynb
-├── powerbi/
-│   ├── vendor_dashboard.pbix
-│   ├── data_model.bim
-│   └── visuals/
-├── data/
-│   ├── raw/
-│   ├── processed/
-│   └── aggregated/
-├── reports/
-│   ├── business_insights.pdf
-│   └── technical_documentation.md
-├── README.md
-└── requirements.txt
-🎯 Business Impact
-This analysis enables:
+Vendor-Performance-analysis/
+├── 📂 sql/
+│   ├── database_setup.sql          # Database creation and schema
+│   ├── data_extraction.sql         # Raw data extraction queries
+│   ├── data_transformation.sql     # Cleaning and transformation
+│   └── aggregations.sql            # Vendor-level aggregations
+├── 📂 notebooks/
+│   ├── 01_data_loading.ipynb       # Data ingestion and validation
+│   ├── 02_exploratory_analysis.ipynb # EDA and visualization
+│   ├── 03_statistical_analysis.ipynb # Hypothesis testing
+│   └── 04_research_questions.ipynb  # Business insights
+├── 📂 powerbi/
+│   ├── Vendor_Dashboard.pbix       # Interactive Power BI file
+│   ├── data_model/                 # Data model configuration
+│   └── assets/                     # Images and resources
+├── 📂 data/
+│   ├── raw/                        # Original data files
+│   ├── processed/                  # Cleaned data
+│   └── outputs/                    # Analysis results
+├── 📂 reports/
+│   ├── business_report.pdf         # Executive summary
+│   ├── technical_documentation.md  # Implementation details
+│   └── presentations/              # Presentation decks
+├── 📂 src/
+│   ├── data_processing.py          # Python data processing modules
+│   ├── analysis_functions.py       # Analytical functions
+│   └── visualization.py            # Plotting utilities
+├── README.md                       # This file
+├── requirements.txt               # Python dependencies
+└── LICENSE                        # MIT License
+📊 Analysis & Insights
+1. Vendor Performance Segmentation
 
-Cost Reduction: 72% unit cost savings through bulk purchasing
+Key Finding: Identified 198 brands with high profit margins but low sales volume, representing untapped growth opportunities.
 
-Risk Mitigation: Vendor diversification strategy
+2. Bulk Purchase Cost Analysis
+Key Finding: Bulk purchasing delivers 72% lower unit costs ($10.78/unit vs. higher unit costs), highlighting significant savings opportunities.
 
-Profit Optimization: 41.55% vs 31.17% margin comparison insights
+3. Inventory Turnover Analysis
+Key Finding: Stock turnover ranges from 0 to 274.5, with $2.71M tied in unsold inventory, indicating optimization potential.
 
-Inventory Efficiency: $2.71M unsold inventory identification
+4. Profit Margin Comparison
+Statistical Validation:
 
-Strategic Decision Making: Data-driven vendor management
+High-performing vendors: 31.17% mean margin
 
-🛠️ Installation & Usage
+Low-performing vendors: 41.55% mean margin
+
+p-value < 0.05: Statistically significant difference
+
+📈 Dashboard Features
+Executive Overview
+
+Key Sections:
+Performance Metrics: Real-time KPI tracking
+
+Vendor Ranking: Top/Bottom performers visualization
+
+Profitability Analysis: Margin trends and comparisons
+
+Inventory Health: Turnover rates and stock levels
+
+Purchase Optimization: Bulk buying impact analysis
+
+Risk Assessment: Vendor concentration metrics
+
+🚀 Getting Started
 Prerequisites
 bash
-# Python dependencies
-pip install pandas numpy matplotlib seaborn scipy statsmodels jupyter
+# Python 3.8 or higher
+python --version
 
-# Database
-# SQL Server / PostgreSQL with procurement database
+# PostgreSQL or compatible database
+# Power BI Desktop (for dashboard)
+Installation
+Clone the repository
 
-# Visualization
-# Power BI Desktop
-Setup Instructions
-Database Setup: Run SQL scripts in /sql/ to create and populate tables
+bash
+git clone https://github.com/Gurunaidu6304/Vendor-Performance-analysis-.git
+cd Vendor-Performance-analysis-
+Set up Python environment
 
-Python Analysis: Open Jupyter notebooks in /python/ for data analysis
+bash
+# Create virtual environment
+python -m venv venv
 
-Dashboard: Load Power BI file in /powerbi/ to explore interactive visuals
+# Activate on Windows
+venv\Scripts\activate
 
-📊 Dashboard Features
-Vendor Performance Overview: Key metrics at a glance
+# Activate on Mac/Linux
+source venv/bin/activate
 
-Profitability Analysis: Margin comparison across vendor segments
+# Install dependencies
+pip install -r requirements.txt
+Database Setup
 
-Inventory Health: Stock turnover and unsold inventory tracking
+sql
+-- Run the SQL scripts in order
+\i sql/database_setup.sql
+\i sql/data_extraction.sql
+\i sql/data_transformation.sql
+\i sql/aggregations.sql
+Run Analysis
 
-Purchase Optimization: Bulk purchasing impact visualization
+bash
+# Launch Jupyter Notebook
+jupyter notebook
 
-Vendor Risk Assessment: Concentration and dependency analysis
+# Open and run notebooks in order:
+# 01_data_loading.ipynb
+# 02_exploratory_analysis.ipynb
+# 03_statistical_analysis.ipynb
+# 04_research_questions.ipynb
+Explore Dashboard
 
-🎯 Key Findings & Recommendations
-Critical Insights
-Vendor Concentration Risk: Top 10 vendors represent 65.69% of purchases
+Open powerbi/Vendor_Dashboard.pbix in Power BI Desktop
 
-Bulk Purchase Advantage: 72% lower unit cost for large orders
+Connect to your processed data source
 
-Inventory Inefficiency: $2.71M tied in unsold stock
+Refresh and explore interactive visuals
 
-Margin Disparity: Low-performing vendors have higher margins (41.55%) but lower sales
+📋 Research Questions & Findings
+Q1: Which brands need promotional adjustments?
+Answer: 198 brands identified with high margins but low sales. Recommended targeted marketing campaigns.
 
-Statistical Validation: Significant difference in vendor profitability models
+Q2: What's the bulk purchase impact?
+Answer: 72% unit cost reduction, suggesting strategic bulk purchasing programs.
 
-Strategic Recommendations
-Immediate: Diversify vendor base, launch clearance sales
+Q3: Which vendors have low inventory turnover?
+Answer: Identified vendors with $2.71M in unsold inventory. Recommended clearance strategies.
 
-Short-term: Optimize pricing for 198 identified brands
+Q4: Profit margin differences between vendor groups?
+Answer: Statistically significant difference (41.55% vs 31.17%). High-margin vendors need sales volume improvement.
 
-Long-term: Implement bulk purchasing program, enhance vendor relationship management
+🎯 Business Recommendations
+Immediate Actions (1-3 months)
+Launch clearance sales for $2.71M unsold inventory
 
-📈 Success Metrics
-Reduce unsold inventory by 20%
+Implement targeted promotions for 198 high-margin, low-sales brands
 
-Improve overall profit margins by 10-15%
+Negotiate bulk discounts with top vendors
 
-Decrease top vendor dependency to below 50%
+Strategic Initiatives (3-12 months)
+Diversify vendor base to reduce 65.69% concentration risk
 
-Increase sales volume for targeted brands by 25%
+Implement inventory optimization system
+
+Develop vendor performance scorecard
+
+Create automated reporting dashboard
+
+📊 Expected Business Impact
+Metric	Current	Target	Improvement
+Unsold Inventory	$2.71M	$2.17M	-20%
+Profit Margin	38.7%	42.6%	+10%
+Top Vendor Dependency	65.69%	<50%	-24%
+Bulk Purchase Adoption	Low	High	+50%
+🤝 Contributing
+Contributions are welcome! Please follow these steps:
+
+Fork the repository
+
+Create a feature branch (git checkout -b feature/AmazingFeature)
+
+Commit changes (git commit -m 'Add some AmazingFeature')
+
+Push to branch (git push origin feature/AmazingFeature)
+
+Open a Pull Request
+
+📝 License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+🙏 Acknowledgments
+Dataset adapted from real-world procurement scenarios
+
+Inspired by retail/wholesale industry challenges
+
+Built for educational and portfolio purposes
